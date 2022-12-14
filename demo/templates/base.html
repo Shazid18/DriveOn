@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+
+        body {
+            display: block;
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 5px;
+            overflow: hidden;
+            background-color: #4CA1AF;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: 'Ropa Sans', sans-serif;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #1b6670;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'rent-car' %}">Rent Car</a></li>
+        <li><a href="{% url 'buy-car' %}">Buy Car</a></li>
+        <li><a href="{% url 'driver' %}">Hire Driver</a></li>
+        <li><a href="{% url 'view-profile' %}">Profile</a></li>
+        <li><a href="#"> </a></li>
+        <li><a href="#"> </a></li>
+        <li><a href="#"> </a></li>
+        <li><a align='left'>Hello, {{request.user}}</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+
+    </ul>
+
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% block content %}{% endblock %}
+
+
+
+<!--    <footer class="bg-light text-center text-white">-->
+<!--  &lt;!&ndash; Grid container &ndash;&gt;-->
+<!--  <div class="container p-4 pb-0">-->
+<!--    &lt;!&ndash; Section: Social media &ndash;&gt;-->
+<!--    <section class="mb-4">-->
+<!--      &lt;!&ndash; Facebook &ndash;&gt;-->
+<!--      <a-->
+<!--        class="btn text-white btn-floating m-1"-->
+<!--        style="background-color: #3b5998;"-->
+<!--        href="#!"-->
+<!--        role="button"-->
+<!--        ><i class="fab fa-facebook-f"></i-->
+<!--      ></a>-->
+
+<!--      &lt;!&ndash; Twitter &ndash;&gt;-->
+<!--      <a-->
+<!--        class="btn text-white btn-floating m-1"-->
+<!--        style="background-color: #55acee;"-->
+<!--        href="#!"-->
+<!--        role="button"-->
+<!--        ><i class="fab fa-twitter"></i-->
+<!--      ></a>-->
+
+<!--      &lt;!&ndash; Google &ndash;&gt;-->
+<!--      <a-->
+<!--        class="btn text-white btn-floating m-1"-->
+<!--        style="background-color: #dd4b39;"-->
+<!--        href="#!"-->
+<!--        role="button"-->
+<!--        ><i class="fab fa-google"></i-->
+<!--      ></a>-->
+
+<!--      &lt;!&ndash; Instagram &ndash;&gt;-->
+<!--      <a-->
+<!--        class="btn text-white btn-floating m-1"-->
+<!--        style="background-color: #ac2bac;"-->
+<!--        href="#!"-->
+<!--        role="button"-->
+<!--        ><i class="fab fa-instagram"></i-->
+<!--      ></a>-->
+
+<!--      &lt;!&ndash; Linkedin &ndash;&gt;-->
+<!--      <a-->
+<!--        class="btn text-white btn-floating m-1"-->
+<!--        style="background-color: #0082ca;"-->
+<!--        href="#!"-->
+<!--        role="button"-->
+<!--        ><i class="fab fa-linkedin-in"></i-->
+<!--      ></a>-->
+<!--      &lt;!&ndash; Github &ndash;&gt;-->
+<!--      <a-->
+<!--        class="btn text-white btn-floating m-1"-->
+<!--        style="background-color: #333333;"-->
+<!--        href="#!"-->
+<!--        role="button"-->
+<!--        ><i class="fab fa-github"></i-->
+<!--      ></a>-->
+<!--    </section>-->
+<!--    &lt;!&ndash; Section: Social media &ndash;&gt;-->
+<!--  </div>-->
+<!--  &lt;!&ndash; Grid container &ndash;&gt;-->
+
+<!--  &lt;!&ndash; Copyright &ndash;&gt;-->
+<!--  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">-->
+<!--    © 2020 Copyright:-->
+<!--    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>-->
+<!--  </div>-->
+<!--  &lt;!&ndash; Copyright &ndash;&gt;-->
+<!--</footer>-->
+
+
+</body>
+
+</html>

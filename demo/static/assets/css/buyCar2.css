@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+body{
+	background: #F5F1EE;
+    font-family: 'Ropa Sans', sans-serif;
+}
+.card{
+	width: 250px;
+	border-radius: 10px;
+	margin-top: 15px;
+}
+
+.card-img-top{
+	/* flex-wrap: wrap; */
+	height: 150px;
+	width: 100%;
+
+
+}
+
+span.text-muted{
+	font-size: 12px;
+}
+
+h5.mb-0{
+	font-size: 1rem;
+}
+.mid{
+	background: #ECEDF1;
+}
+h6.ml-1{
+	font-size: 13px;
+}
+.btn-danger{
+	color: #FFCBD2;
+	border-radius: 20px;
+}
+.btn-danger:focus{
+	box-shadow: none;
+}
+@media screen and (max-width:600px){
+    .col-sm-4{
+        margin-bottom: 50px;
+    }
+}

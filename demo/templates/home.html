@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<!--testing html-->
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <title>Home:DriveOn</title>
+
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="{% static 'assets/css/global1.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/index.css' %}" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Ropa Sans:ital,wght@0,400;1,400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@800&display=swap" />
+    <!--    <link rel="stylesheet" href="sidebar.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+</head>
+
+<body>
+    <section class="homepage-section" id="homepage">
+        <div class="upper-div" id="upper-home"></div>
+        <div class="youve-come-to-the-right-place">
+            You’ve come to the right place. Book cars on demand by the hour or day.
+            Join instantly, drive in minutes.
+        </div>
+        <h1 class="looking-for-a-car" id="hometop-heading">
+            <p class="looking-for-a">Looking for a car?</p>
+        </h1>
+        <!--      <div class="top-bar-div" id="header"></div>-->
+        <img class="image-icon" alt="image" src="{% static 'assets/landing icon.png' %}" />
+        </div>
+        <h2 class="how-driveon-works" id="bottomheader">How DriveON Works</h2>
+        <img class="log-in-icon" alt="" src="{% static 'assets/phone.png' %}" />
+        <h2 class="home-bottom1" id="home-bottom">
+            Apply online with a valid driver's license. Most people are approved
+            instantly and can book a trip within minutes.
+        </h2>
+        <img class="ellipse-icon" alt="" src="{% static 'assets/wheel.png' %}" />
+        <h3 class="home-bottom2" id="home-bottom2">
+            Book a round trip car by the hour or day.
+        </h3>
+        <img class="ellipse-icon1" alt="" src="{% static 'assets/drop.png' %}" />
+        <h3 class="home-bottom3" id="home-bottom3">
+            When you're done, park the car in the same location you picked it up
+            from, then end the trip.
+        </h3>
+    </section>
+
+    <script>
+        var rectangleButton = document.getElementById("rectangleButton");
+        if (rectangleButton) {
+            rectangleButton.addEventListener("click", function (e) {
+                // Please sync "Log in screen" to the project
+            });
+        }
+
+        var logInButton = document.getElementById("logInButton");
+        if (logInButton) {
+            logInButton.addEventListener("click", function (e) {
+                // Please sync "Log in screen" to the project
+            });
+        }
+
+        var signUpButton = document.getElementById("signUpButton");
+        if (signUpButton) {
+            signUpButton.addEventListener("click", function (e) {
+                // Please sync "Log in screen" to the project
+            });
+        }
+
+        var rectangleButton1 = document.getElementById("rectangleButton1");
+        if (rectangleButton1) {
+            rectangleButton1.addEventListener("click", function (e) {
+                // Please sync "sign up page" to the project
+            });
+        }
+
+        var jOINNOWButton = document.getElementById("jOINNOWButton");
+        if (jOINNOWButton) {
+            jOINNOWButton.addEventListener("click", function (e) {
+                // Please sync "sign up page" to the project
+            });
+        }
+
+        var joinNowContainer = document.getElementById("joinNowContainer");
+        if (joinNowContainer) {
+            joinNowContainer.addEventListener("click", function (e) {
+                // Please sync "sign up page" to the project
+            });
+        }
+    </script>
+</body>
+
+</html>
+
+
+{% endblock %}
